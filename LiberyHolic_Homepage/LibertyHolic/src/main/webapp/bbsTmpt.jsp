@@ -108,31 +108,45 @@
 	margin : 0 ;
   	top  : 210px;
 	left : 445px; 
+	
 }
+.row{
+  display : inline;
 
+}
 .table {
 	top  : 210px;
-	left : 445px; 
+	left : 575px; 
 	width: 750px;
-	position: relative;
+	position: absolute;
 }
 </style>
 <!-- 버튼 css -->
 <style>
-.btn-arrow-left{
-	top  : 550px;
-	right : 500px; 
+.btn-arrow-previous{
+	top  : 500px;
+	right: 10px; 
 	width: 100px;
 	height : 35px;
  	position: relative;
+}
+
+.btn-arrow-next{
+	top  : 500px;
+	right : 0px;
+	width: 100px;
+	height : 35px;
+ 	position: relative;
+
+
 }
 </style>
 <!-- 글쓰기 버튼 -->
 <style>
 
 .pull-right{
-	top  : 150px;
-	left : 150px; 
+	top  : 0px;
+	/* left : 150px; */ 
 	width: 10%;
 	height: 40px;
 	position: relative;
@@ -202,7 +216,7 @@
 	<!-- 메인 헤더 -->
 	<header id="main-header">
 		<hgroup>
-			<h1 class="master-title">Libertyholic</h1>
+			<h1 class ="master-title"><a href ="main.jsp">Libertyholic</a></h1>
 			<h4 class="master-description">컨셉콘텐츠제작소</h4>
 		</hgroup>
 	</header>
@@ -213,7 +227,7 @@
 			<li class="group">
 				<div class="title">전체공지</div>
 				<ul class="sub">
-					<li><a href="#">전체공지</a></li>
+					<li><a href="bbsTmpt.jsp">전체공지</a></li>
 				</ul>
 			</li>
 			<li class="group">
@@ -297,11 +311,11 @@
 			<%
 				if(pageNumber != 1){
 			%>
-				<a href ="bbsTmpt.jsp?pageNumber=<%=pageNumber - 1%>"class="btn btn-success btn-arrow-left">이전</a>
+				<a href ="bbsTmpt.jsp?pageNumber=<%=pageNumber - 1%>"class="btn btn-success btn-arrow-previous">이전</a>
 			<% 
 				} if(bbsDAO.nextPage(pageNumber + 1)){
 			%>
-				<a href ="bbsTmpt.jsp?pageNumber=<%=pageNumber + 1%>"class="btn btn-success btn-arrow-left">다음</a>
+				<a href ="bbsTmpt.jsp?pageNumber=<%=pageNumber + 1%>"class="btn btn-success btn-arrow-next">다음</a>
 			<%
 				}
 			%>

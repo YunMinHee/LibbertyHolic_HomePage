@@ -212,7 +212,7 @@
 		<li class="group">
 		    <div class="title">전체공지</div>
 		    <ul class="sub">
-		        <li><a href="#">전체공지</a></li>
+		        <li><a href="bbsTmpt.jsp">전체공지</a></li>
 		    </ul>
 		</li>
 		<li class="group">
